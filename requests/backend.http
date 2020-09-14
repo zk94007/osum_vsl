@@ -1,0 +1,63 @@
+### Authorization by token, part 2. Use token to authorize.
+POST http://localhost:8765/transcriptions?async=false
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="transcript"
+Content-Type: text/plain
+
+< ./transcript.txt
+--WebAppBoundary
+Content-Disposition: form-data; name="audio";filename="123.wav"
+Content-Type: application/json
+
+< ./f1374fb7-f390-4603-96c6-429cb92dbef0.wav
+--WebAppBoundary--
+
+
+### Authorization by token, part 2. Use token to authorize.
+POST http://localhost:3000/api/start
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="disclaimer"
+Content-Type: text/plain
+
+image
+--WebAppBoundary
+Content-Disposition: form-data; name="text"
+Content-Type: text/plain
+
+image
+--WebAppBoundary
+Content-Disposition: form-data; name="productimages"; filename="123.txt"
+Content-Type: application/json
+
+< ./123.txt
+--WebAppBoundary
+Content-Disposition: form-data; name="productimages"; filename="123.txt"
+Content-Type: application/json
+
+< ./123.txt
+--WebAppBoundary
+Content-Disposition: form-data; name="guaranteeimages"; filename="123.txt"
+Content-Type: application/json
+
+< ./123.txt
+--WebAppBoundary--
+
+###
+
+
+### Send POST request with body as parameters
+POST http://localhost:3000/api/start
+Content-Type: application/x-www-form-urlencoded
+
+script=999valuesfsdfdfcontent&useVidux=1&videosPercent=100
+
+
+### Send POST request with body as parameters
+POST http://35.202.115.25/api/start
+Content-Type: application/x-www-form-urlencoded
+
+script=999valuesfsdfdfcontent&useVidux=1&videosPercent=100
